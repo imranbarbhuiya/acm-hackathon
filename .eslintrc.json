@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+	"root": true,
+	"extends": ["mahir/common", "mahir/node", "mahir/typescript", "mahir/react", "mahir/next", "mahir/prettier"],
+	"ignorePatterns": [".next", "next-env.d.ts", "next.config.js"],
+	"parserOptions": {
+		"project": ["./tsconfig.json"]
+	}
 }
