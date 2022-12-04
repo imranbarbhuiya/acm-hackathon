@@ -8,6 +8,7 @@ const useStyles = createStyles((theme) => ({
 		position: 'relative',
 		paddingTop: 120,
 		paddingBottom: 80,
+		minHeight: '100vh',
 
 		'@media (max-width: 755px)': {
 			paddingTop: 80,

@@ -1,6 +1,7 @@
 'use client';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { usePathname } from 'next/navigation';
 
 const HEADER_HEIGHT = 60;
 
@@ -74,32 +75,31 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const links: { label: string; link: string }[] = [
-	{ label: 'Website', link: 'https://acmjet.com' },
+	{ label: 'Home', link: '/#' },
 	{
-		label: 'About',
-		link: 'https://acmjet.com#about',
-	},
-	{
-		label: 'Events',
-		link: 'https://acmjet.com/events',
+		label: 'FAQ',
+		link: '/#faq',
 	},
 ];
 
 export function Navbar() {
 	const [opened, { toggle, close }] = useDisclosure(false);
-	// const [active, setActive] = useState(links[0].link);
+	const pathname = usePathname();
 	const { classes, cx } = useStyles();
+	let hash = '';
+
+	if (typeof window !== 'undefined') {
+		hash = window.location.hash;
+	}
+
+	const url = pathname! + hash;
 
 	const items = links.map((link) => (
 		<a
-			className={cx(classes.link /* { [classes.linkActive]: active === link.link } */)}
+			className={cx(classes.link, { [classes.linkActive]: url === link.link })}
 			href={link.link}
 			key={link.label}
-			onClick={(event) => {
-				event.preventDefault();
-				// setActive(link.link);
-				close();
-			}}
+			onClick={close}
 		>
 			{link.label}
 		</a>

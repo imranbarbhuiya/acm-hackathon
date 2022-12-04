@@ -1,5 +1,9 @@
 'use client';
 import { createStyles, Title, Container, Accordion } from '@mantine/core';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
+import { variants } from './variants';
 
 const useStyles = createStyles((theme, _params, getRef) => {
 	const icon = getRef('control');
@@ -61,8 +65,21 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
 export function Faq() {
 	const { classes } = useStyles();
+	const controls = useAnimation();
+	const ref = useRef(null);
+	const inView = useInView(ref);
+
+	useEffect(() => {
+		if (inView) {
+			void controls.start('visible');
+		} else {
+			controls.stop();
+			void controls.start('hidden');
+		}
+	}, [controls, inView]);
+
 	return (
-		<div className={classes.wrapper}>
+		<motion.div animate={controls} className={classes.wrapper} id="faq" initial="hidden" ref={ref} variants={variants}>
 			<Container size="lg">
 				<Title align="center" className={classes.title}>
 					Frequently Asked Questions
@@ -118,6 +135,6 @@ export function Faq() {
 					</Accordion.Item>
 				</Accordion>
 			</Container>
-		</div>
+		</motion.div>
 	);
 }
