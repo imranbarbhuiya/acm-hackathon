@@ -5,4 +5,7 @@ export default {
 	experimental: {
 		appDir: true,
 	},
+	images: {
+		domains: ['images.unsplash.com', 'plus.unsplash.com'],
+	},
 };
