@@ -108,7 +108,7 @@ export function Navbar() {
 	return (
 		<Header className={classes.root} height={HEADER_HEIGHT} mb={120}>
 			<Container className={classes.header}>
-				<Text>ACM</Text>
+				<Text>ACM LOGO</Text>
 				<Group className={classes.links} spacing={5}>
 					{items}
 				</Group>

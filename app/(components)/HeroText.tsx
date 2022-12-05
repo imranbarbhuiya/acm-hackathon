@@ -104,7 +104,7 @@ export function HeroText() {
 				<Title className={classes.title}>
 					Hackathon by{' '}
 					<Text className={classes.highlight} component="span" inherit>
-						ACMJM
+						ACM MJCET
 					</Text>
 				</Title>
 
