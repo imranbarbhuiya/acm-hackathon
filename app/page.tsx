@@ -1,3 +1,4 @@
+import { About } from './(components)/About';
 import { Faq } from './(components)/Faq';
 import { HeroText } from './(components)/HeroText';
 import { Navbar } from './(components)/Navbar';
@@ -7,7 +8,7 @@ export default function Home() {
 		<>
 			<Navbar />
 			<HeroText />
-
+			<About />
 			<Faq />
 		</>
 	);

@@ -6,7 +6,7 @@ import { Dots } from './Dots';
 const useStyles = createStyles((theme) => ({
 	wrapper: {
 		position: 'relative',
-		paddingTop: 120,
+		paddingTop: 140,
 		paddingBottom: 80,
 		minHeight: '100vh',
 
@@ -38,14 +38,14 @@ const useStyles = createStyles((theme) => ({
 	title: {
 		textAlign: 'center',
 		fontWeight: 800,
-		fontSize: 60,
+		fontSize: 80,
 		letterSpacing: -1,
 		color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 		marginBottom: theme.spacing.xs,
 		fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
 		'@media (max-width: 520px)': {
-			fontSize: 28,
+			fontSize: 40,
 			textAlign: 'left',
 		},
 	},

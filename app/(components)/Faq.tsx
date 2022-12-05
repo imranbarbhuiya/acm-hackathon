@@ -3,7 +3,7 @@ import { createStyles, Title, Container, Accordion } from '@mantine/core';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-import { variants } from './variants';
+import { leftVariants } from './variants';
 
 const useStyles = createStyles((theme, _params, getRef) => {
 	const icon = getRef('control');
@@ -13,6 +13,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 			paddingTop: theme.spacing.xl * 2,
 			paddingBottom: theme.spacing.xl * 2,
 			position: 'relative',
+			minHeight: '100vh',
 		},
 
 		title: {
@@ -79,7 +80,14 @@ export function Faq() {
 	}, [controls, inView]);
 
 	return (
-		<motion.div animate={controls} className={classes.wrapper} id="faq" initial="hidden" ref={ref} variants={variants}>
+		<motion.div
+			animate={controls}
+			className={classes.wrapper}
+			id="faq"
+			initial="hidden"
+			ref={ref}
+			variants={leftVariants}
+		>
 			<Container size="lg">
 				<Title align="center" className={classes.title}>
 					Frequently Asked Questions
