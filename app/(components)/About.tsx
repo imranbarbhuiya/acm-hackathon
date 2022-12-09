@@ -46,6 +46,7 @@ const useStyles = createStyles((theme) => ({
 
 		'@media (max-width: 768px)': {
 			padding: '0 10px',
+			fontSize: theme.fontSizes.md,
 		},
 	},
 
