@@ -42,7 +42,8 @@ const useStyles = createStyles((theme) => ({
 		margin: 'auto',
 		textAlign: 'center',
 		marginTop: theme.spacing.lg,
-		fontSize: theme.fontSizes.md,
+		fontSize: theme.fontSizes.lg,
+		padding: '0 100px',
 	},
 
 	bold: {

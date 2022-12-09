@@ -13,21 +13,25 @@ export function Carousel() {
 
 	const images = urls.map((url, idx) => (
 		<MantineCarousel.Slide key={idx}>
-			<Image alt="Carousel Image" height={400} src={url} width={780} />
+			<Image alt="Carousel Image" fill src={url} />
 		</MantineCarousel.Slide>
 	));
 
 	return (
 		<MantineCarousel
-			height="70vh"
+			controlSize={50}
+			height="85vh"
+			loop
 			mx="auto"
 			/* eslint-disable react/jsx-handler-names */
 			onMouseEnter={autoplay.current.stop}
 			onMouseLeave={autoplay.current.reset}
 			/* eslint-enable react/jsx-handler-names */
 			plugins={[autoplay.current]}
+			slideGap="md"
 			sx={{
-				maxWidth: 780,
+				maxWidth: 900,
+				position: 'relative',
 			}}
 			withIndicators
 		>
