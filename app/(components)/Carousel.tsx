@@ -1,3 +1,5 @@
+'use client';
+
 import { Carousel as MantineCarousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';

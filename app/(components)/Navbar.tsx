@@ -1,7 +1,11 @@
 'use client';
-import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
+
+import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+
+import logoImage from '../logo.png';
 
 const HEADER_HEIGHT = 60;
 
@@ -108,7 +112,7 @@ export function Navbar() {
 	return (
 		<Header className={classes.root} height={HEADER_HEIGHT} mb={120}>
 			<Container className={classes.header}>
-				<Text>ACM LOGO</Text>
+				<Image alt="ACM MJCET LOGO" height={30} src={logoImage} width={125} />
 				<Group className={classes.links} spacing={5}>
 					{items}
 				</Group>

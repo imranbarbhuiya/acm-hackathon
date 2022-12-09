@@ -1,5 +1,10 @@
+'use client';
+
 import { createStyles, Group, ActionIcon } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import Image from 'next/image';
+
+import logoImage from '../logo.png';
 
 const useStyles = createStyles((theme) => ({
 	noop: {
@@ -32,7 +37,7 @@ export function Footer() {
 		<div>
 			<div className={classes.noop} />
 			<div className={classes.inner}>
-				ACM MJCET
+				<Image alt="ACM MJCET LOGO" height={30} src={logoImage} width={125} />
 				<Group noWrap position="right" spacing="xs">
 					<ActionIcon radius="xl" size="lg" variant="default">
 						<IconBrandTwitter size={18} stroke={1.5} />

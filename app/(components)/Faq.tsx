@@ -1,4 +1,5 @@
 'use client';
+
 import { createStyles, Container, Accordion } from '@mantine/core';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';

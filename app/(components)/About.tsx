@@ -32,7 +32,6 @@ const useStyles = createStyles((theme) => ({
 			backgroundColor: theme.fn.primaryColor(),
 			width: 45,
 			height: 2,
-			marginTop: theme.spacing.sm,
 			marginLeft: 'auto',
 			marginRight: 'auto',
 		},
