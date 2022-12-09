@@ -43,6 +43,10 @@ const useStyles = createStyles((theme) => ({
 		marginTop: theme.spacing.lg,
 		fontSize: theme.fontSizes.lg,
 		padding: '0 100px',
+
+		'@media (max-width: 768px)': {
+			padding: '0 10px',
+		},
 	},
 
 	bold: {

@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import RootStyleRegistry from './emotion';
+import RootStyleRegistry from './provider';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (

@@ -1,11 +1,28 @@
 'use client';
 
 import { CacheProvider } from '@emotion/react';
-import { useEmotionCache, MantineProvider } from '@mantine/core';
+import { useEmotionCache, MantineProvider /* ColorSchemeProvider */ } from '@mantine/core';
+// import { useColorScheme, useHotkeys, useLocalStorage } from '@mantine/hooks';
 import { AnimatePresence } from 'framer-motion';
 import { useServerInsertedHTML } from 'next/navigation';
 
+// import type { ColorScheme } from '@mantine/core';
+
 export default function RootStyleRegistry({ children }: { children: React.ReactNode }) {
+	// const preferredColorScheme = useColorScheme();
+
+	// TODO: use cookie once nextjs supports cookie mutation in server component
+	// const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+	// 	key: 'mantine-color-scheme',
+	// 	defaultValue: preferredColorScheme,
+	// 	getInitialValueInEffect: true,
+	// });
+
+	// const toggleColorScheme = (value?: ColorScheme) =>
+	// 	setColorScheme(value ?? (colorScheme === 'dark' ? 'light' : 'dark'));
+
+	// useHotkeys([['mod+J', () => toggleColorScheme()]]);
+
 	const cache = useEmotionCache();
 	cache.compat = true;
 	// eslint-disable-next-line @typescript-eslint/unbound-method
@@ -48,6 +65,7 @@ export default function RootStyleRegistry({ children }: { children: React.ReactN
 	});
 
 	return (
+		// <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
 		<CacheProvider value={cache}>
 			<MantineProvider
 				theme={{
@@ -59,5 +77,6 @@ export default function RootStyleRegistry({ children }: { children: React.ReactN
 				<AnimatePresence>{children}</AnimatePresence>
 			</MantineProvider>
 		</CacheProvider>
+		// </ColorSchemeProvider>
 	);
 }

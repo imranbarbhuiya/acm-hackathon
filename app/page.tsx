@@ -9,7 +9,11 @@ import { Team } from './(components)/Team';
 export default function Home() {
 	return (
 		<>
-			<div style={{ backgroundColor: '#1a1b1e' }}>
+			<div
+				style={{
+					backgroundColor: '#1a1b1e',
+				}}
+			>
 				<Navbar />
 				<HeroText />
 				<About />

@@ -117,9 +117,6 @@ export function HeroText() {
 					<Button className={classes.control} color="gray" size="lg" variant="default">
 						Join Now
 					</Button>
-					<Button className={classes.control} size="lg">
-						Login
-					</Button>
 				</div>
 			</div>
 		</Container>
