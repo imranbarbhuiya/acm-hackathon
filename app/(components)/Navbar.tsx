@@ -125,7 +125,7 @@ export function Navbar() {
 	// ));
 
 	return (
-		<Header className={classes.root} height={HEADER_HEIGHT} mb={120}>
+		<Header className={classes.root} height={HEADER_HEIGHT}>
 			<Container className={classes.header}>
 				<Image alt="ACM MJCET LOGO" height={30} src={logoImage} width={125} />
 				{/* <Group className={classes.links} spacing={5}>

@@ -4,7 +4,7 @@ import { createStyles, Container, Accordion } from '@mantine/core';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-import { leftVariants, rightVariants } from './variants';
+import { topVariants, bottomVariants } from './variants';
 
 const useStyles = createStyles((theme, _params, getRef) => {
 	const icon = getRef('control');
@@ -84,11 +84,11 @@ export function Faq() {
 	return (
 		<div className={classes.wrapper} id="faq" ref={ref}>
 			<Container size="lg">
-				<motion.div animate={controls} className={classes.title} initial="hidden" variants={rightVariants}>
+				<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
 					Frequently Asked Questions
 				</motion.div>
 
-				<motion.div animate={controls} initial="hidden" variants={leftVariants}>
+				<motion.div animate={controls} initial="hidden" variants={bottomVariants}>
 					<Accordion
 						chevronPosition="right"
 						chevronSize={50}

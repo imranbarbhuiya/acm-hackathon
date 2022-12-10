@@ -9,6 +9,10 @@ const useStyles = createStyles((theme) => ({
 		paddingTop: 140,
 		paddingBottom: 80,
 		minHeight: '100vh',
+		width: '100vw',
+		margin: 0,
+		background: 'linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("/space.jpg")',
+		backgroundSize: 'cover',
 
 		'@media (max-width: 755px)': {
 			paddingTop: 80,
@@ -94,7 +98,7 @@ export function HeroText() {
 	const { classes } = useStyles();
 
 	return (
-		<Container className={classes.wrapper} size={1_400}>
+		<div className={classes.wrapper}>
 			<Dots className={classes.dots} style={{ left: 0, top: 0 }} />
 			<Dots className={classes.dots} style={{ left: 60, top: 0 }} />
 			<Dots className={classes.dots} style={{ left: 0, top: 140 }} />
@@ -114,11 +118,11 @@ export function HeroText() {
 					</Text>
 				</Container>
 				<div className={classes.controls}>
-					<Button className={classes.control} color="gray" size="lg" variant="default">
+					<Button className={classes.control} size="lg">
 						Join Now
 					</Button>
 				</div>
 			</div>
-		</Container>
+		</div>
 	);
 }

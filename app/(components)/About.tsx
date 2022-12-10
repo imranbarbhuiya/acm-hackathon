@@ -4,7 +4,7 @@ import { createStyles } from '@mantine/core';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-import { leftVariants, rightVariants } from './variants';
+import { topVariants, bottomVariants } from './variants';
 
 const useStyles = createStyles((theme) => ({
 	wrapper: {
@@ -82,10 +82,10 @@ export function About() {
 
 	return (
 		<div className={classes.wrapper} id="faq" ref={ref}>
-			<motion.div animate={controls} className={classes.title} initial="hidden" variants={leftVariants}>
+			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
 				ABOUT THE EVENT
 			</motion.div>
-			<motion.div animate={controls} className={classes.description} initial="hidden" variants={rightVariants}>
+			<motion.div animate={controls} className={classes.description} initial="hidden" variants={bottomVariants}>
 				As a continuation of a legacy started by like-minded people, <span className={classes.bold}>ACM MJCET</span>{' '}
 				aims to bring together the minds of programmers, designers, application developers, tech-geeks, and novices to
 				the world of programming for the intensive development of a hack. At hackCBS, we provide a tranquil and
