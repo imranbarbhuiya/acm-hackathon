@@ -6,7 +6,7 @@ import { Dots } from './Dots';
 const useStyles = createStyles((theme) => ({
 	wrapper: {
 		position: 'relative',
-		paddingTop: 140,
+		paddingTop: 260,
 		paddingBottom: 80,
 		minHeight: '100vh',
 		width: '100vw',
@@ -99,10 +99,10 @@ export function HeroText() {
 
 	return (
 		<div className={classes.wrapper}>
-			<Dots className={classes.dots} style={{ left: 0, top: 0 }} />
-			<Dots className={classes.dots} style={{ left: 60, top: 0 }} />
-			<Dots className={classes.dots} style={{ left: 0, top: 140 }} />
-			<Dots className={classes.dots} style={{ right: 0, top: 60 }} />
+			<Dots className={classes.dots} style={{ left: 60, top: 90 }} />
+			<Dots className={classes.dots} style={{ left: 120, top: 90 }} />
+			<Dots className={classes.dots} style={{ left: 60, top: 230 }} />
+			<Dots className={classes.dots} style={{ right: 60, top: 340 }} />
 
 			<div className={classes.inner}>
 				<Title className={classes.title}>

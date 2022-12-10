@@ -7,7 +7,7 @@ export function Dots({ size = 185, radius = 2.5, ...others }: DotsProps) {
 	return (
 		<svg
 			aria-hidden
-			fill="currentColor"
+			fill="#999999"
 			height={size}
 			viewBox="0 0 185 185"
 			width={size}
