@@ -92,11 +92,11 @@ export function Faq() {
 					<Accordion
 						chevronPosition="right"
 						chevronSize={50}
-						defaultValue="reset-password"
+						defaultValue="what-is-hackaton"
 						disableChevronRotation
 						variant="separated"
 					>
-						<Accordion.Item className={classes.item} value="reset-password">
+						<Accordion.Item className={classes.item} value="what-is-hackaton">
 							<Accordion.Control>What is a hackathon?</Accordion.Control>
 							<Accordion.Panel>
 								A hackathon can be best described as an “invention marathon”, or in simple words hackathons are about
@@ -107,12 +107,12 @@ export function Faq() {
 							</Accordion.Panel>
 						</Accordion.Item>
 
-						<Accordion.Item className={classes.item} value="another-account">
+						<Accordion.Item className={classes.item} value="how-big-it-can-be">
 							<Accordion.Control>How big a team can be?</Accordion.Control>
 							<Accordion.Panel>The minimum team size is two and the maximum team size is four.</Accordion.Panel>
 						</Accordion.Item>
 
-						<Accordion.Item className={classes.item} value="newsletter">
+						<Accordion.Item className={classes.item} value="who-all-can-participate">
 							<Accordion.Control>Who all can participate?</Accordion.Control>
 							<Accordion.Panel>
 								This is a student hackathon and only students are allowed to participate. You’ll be required to verify
@@ -120,7 +120,7 @@ export function Faq() {
 							</Accordion.Panel>
 						</Accordion.Item>
 
-						<Accordion.Item className={classes.item} value="credit-card">
+						<Accordion.Item className={classes.item} value="do-i-need-to-have-any">
 							<Accordion.Control>
 								Do I need to have any specific qualifications to be a participant for the hackathon?
 							</Accordion.Control>
@@ -129,7 +129,7 @@ export function Faq() {
 							</Accordion.Panel>
 						</Accordion.Item>
 
-						<Accordion.Item className={classes.item} value="payment">
+						<Accordion.Item className={classes.item} value="im-not-a-citizen">
 							<Accordion.Control>I'm not a citizen of India. Can I participate?</Accordion.Control>
 							<Accordion.Panel>
 								There is only one eligibility for this hackathon and that is Motivation. If you love to code and have an

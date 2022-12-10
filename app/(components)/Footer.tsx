@@ -10,6 +10,10 @@ const useStyles = createStyles((theme) => ({
 	noop: {
 		height: 100,
 		width: '100%',
+
+		[theme.fn.smallerThan('sm')]: {
+			height: 120,
+		},
 	},
 	inner: {
 		display: 'flex',
@@ -26,6 +30,7 @@ const useStyles = createStyles((theme) => ({
 
 		[theme.fn.smallerThan('sm')]: {
 			flexDirection: 'column',
+			height: 100,
 		},
 	},
 }));

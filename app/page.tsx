@@ -4,6 +4,7 @@ import { Faq } from './(components)/Faq';
 import { Footer } from './(components)/Footer';
 import { HeroText } from './(components)/HeroText';
 import { Navbar } from './(components)/Navbar';
+import { Prizes } from './(components)/Prizes';
 import { Team } from './(components)/Team';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 				<HeroText />
 				<About />
 				<Carousel />
+				<Prizes />
 				<Team />
 				<Faq />
 			</div>

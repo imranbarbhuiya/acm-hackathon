@@ -8,11 +8,8 @@ import {
 	// Burger,
 	// Paper,
 	// Transition,
-	// useMantineColorScheme,
-	// ActionIcon,
 } from '@mantine/core';
 // import  {useDisclosure} from '@mantine/hooks';
-// import { IconMoonStars, IconSun } from '@tabler/icons';
 import Image from 'next/image';
 // import { usePathname } from 'next/navigation';
 
@@ -98,13 +95,10 @@ const useStyles = createStyles((theme) => ({
 // ];
 
 export function Navbar() {
-	// eslint-disable-next-line @typescript-eslint/unbound-method
-	// const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 	// const [opened, { toggle, close }] = useDisclosure(false);
 	// const pathname = usePathname();
 	const { classes /* cx */ } = useStyles();
 
-	// const dark = colorScheme === 'dark';
 	// let hash = '';
 
 	// if (typeof window !== 'undefined') {
@@ -130,25 +124,9 @@ export function Navbar() {
 				<Image alt="ACM MJCET LOGO" height={30} src={logoImage} width={125} />
 				{/* <Group className={classes.links} spacing={5}>
 					{items}
-					<ActionIcon
-						color={dark ? 'yellow' : 'blue'}
-						onClick={() => toggleColorScheme()}
-						title="Toggle color scheme"
-						variant="default"
-					>
-						{dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
-					</ActionIcon>
 				</Group> */}
 
 				{/* <Group className={classes.burger}> */}
-				{/* <ActionIcon
-					color={dark ? 'yellow' : 'blue'}
-					onClick={() => toggleColorScheme()}
-					title="Toggle color scheme"
-					variant="outline"
-				>
-					{dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
-				</ActionIcon> */}
 				{/* <Burger onClick={toggle} opened={opened} size="sm" />
 				</Group> */}
 				{/* <Transition duration={200} mounted={opened} transition="pop-top-right">
