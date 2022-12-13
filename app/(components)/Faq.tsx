@@ -11,6 +11,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
 	return {
 		wrapper: {
+			marginTop: 60,
 			paddingTop: theme.spacing.xl * 2,
 			paddingBottom: theme.spacing.xl * 2,
 			position: 'relative',

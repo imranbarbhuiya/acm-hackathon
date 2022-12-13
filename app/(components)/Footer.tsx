@@ -4,7 +4,7 @@ import { createStyles, Group, ActionIcon } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
 import Image from 'next/image';
 
-import logoImage from '../logo.png';
+import logoImage from '../(images)/logo.png';
 
 const useStyles = createStyles((theme) => ({
 	noop: {

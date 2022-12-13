@@ -18,7 +18,7 @@ interface TeamCardProps {
 }
 const useStyle = createStyles((theme) => ({
 	root: {
-		marginTop: 20,
+		marginTop: 80,
 		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',

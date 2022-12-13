@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { motion, useScroll } from 'framer-motion';
 import Image from 'next/image';
 
-import logoImage from '../logo.png';
+import logoImage from '../(images)/logo.png';
 
 const HEADER_HEIGHT = 60;
 

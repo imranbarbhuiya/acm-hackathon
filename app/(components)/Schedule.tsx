@@ -2,13 +2,33 @@
 
 import { createStyles, Tabs, Text, Timeline, type TabsProps } from '@mantine/core';
 
-const useStyle = createStyles(() => ({
+const useStyle = createStyles((theme) => ({
 	root: {
 		marginTop: 20,
 		width: '100%',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+	},
+
+	title: {
+		fontSize: 34,
+		fontWeight: 900,
+		[theme.fn.smallerThan('sm')]: {
+			fontSize: 24,
+		},
+		textAlign: 'center',
+		marginTop: theme.spacing.sm,
+
+		'&::after': {
+			content: '""',
+			display: 'block',
+			backgroundColor: theme.fn.primaryColor(),
+			width: 45,
+			height: 2,
+			marginLeft: 'auto',
+			marginRight: 'auto',
+		},
 	},
 }));
 
@@ -75,6 +95,7 @@ export function Schedule() {
 
 	return (
 		<div className={classes.root} id="schedule">
+			<div className={classes.title}>Schedule</div>
 			<StyledTabs defaultValue="1">
 				<Tabs.List grow>
 					<Tabs.Tab value="1">1st - Jan</Tabs.Tab>

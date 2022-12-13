@@ -2,7 +2,7 @@
 import { createStyles, Text, Button, Container } from '@mantine/core';
 import Image from 'next/image';
 
-import heroImage from '../heroLogo.png';
+import heroImage from '../(images)/heroLogo.png';
 
 const useStyles = createStyles((theme) => ({
 	wrapper: {

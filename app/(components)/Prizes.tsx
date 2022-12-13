@@ -7,9 +7,9 @@ import { useEffect, useRef } from 'react';
 
 import { topVariants } from './variants';
 
-import firstImage from '../first.png';
-import secondImage from '../second.png';
-import thirdImage from '../third.png';
+import firstImage from '../(images)/first.png';
+import secondImage from '../(images)/second.png';
+import thirdImage from '../(images)/third.png';
 
 const useStyles = createStyles((theme, _params, getRef) => ({
 	wrapper: {
