@@ -2,7 +2,6 @@
 
 import { CacheProvider } from '@emotion/react';
 import { useEmotionCache, MantineProvider } from '@mantine/core';
-import { AnimatePresence } from 'framer-motion';
 import { useServerInsertedHTML } from 'next/navigation';
 
 export default function RootStyleRegistry({ children }: { children: React.ReactNode }) {
@@ -56,7 +55,7 @@ export default function RootStyleRegistry({ children }: { children: React.ReactN
 				withGlobalStyles
 				withNormalizeCSS
 			>
-				<AnimatePresence>{children}</AnimatePresence>
+				{children}
 			</MantineProvider>
 		</CacheProvider>
 	);

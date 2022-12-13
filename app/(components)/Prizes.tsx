@@ -51,6 +51,7 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 		borderRadius: theme.radius.sm,
 		boxShadow: `0px 0px 8px ${theme.colors.gray[theme.colorScheme === 'dark' ? 6 : 3]}`,
 		transition: 'transform 1s',
+		marginTop: 100,
 
 		[`&:hover .${getRef('circleImage')}`]: {
 			transform: 'rotate(360deg)',
@@ -107,11 +108,11 @@ export function Prizes() {
 	}, [controls, inView]);
 
 	return (
-		<div className={classes.wrapper} id="faq" ref={ref}>
+		<div className={classes.wrapper} id="prizes" ref={ref}>
 			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
 				PRIZES
 			</motion.div>
-			<Group mt={120} spacing="xl">
+			<Group position="center" spacing="xl">
 				<div className={classes.card}>
 					<div
 						className={classes.topCircle}

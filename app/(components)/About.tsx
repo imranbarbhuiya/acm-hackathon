@@ -81,7 +81,7 @@ export function About() {
 	}, [controls, inView]);
 
 	return (
-		<div className={classes.wrapper} id="faq" ref={ref}>
+		<div className={classes.wrapper} id="about" ref={ref}>
 			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
 				ABOUT THE EVENT
 			</motion.div>
