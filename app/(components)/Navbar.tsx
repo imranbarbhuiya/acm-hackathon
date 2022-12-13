@@ -4,7 +4,6 @@ import { createStyles, Header, Container, Group, Burger, Paper, Transition } fro
 import { useDisclosure } from '@mantine/hooks';
 import { motion, useScroll } from 'framer-motion';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 
 import logoImage from '../logo.png';
 
@@ -12,8 +11,8 @@ const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
 	root: {
-		position: 'relative',
-		zIndex: 1,
+		position: 'fixed',
+		zIndex: 100,
 	},
 
 	dropdown: {
@@ -75,16 +74,9 @@ const useStyles = createStyles((theme) => ({
 		},
 	},
 
-	linkActive: {
-		'&, &:hover': {
-			backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-			color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
-		},
-	},
-
 	progressBar: {
 		position: 'fixed',
-		top: 0,
+		top: HEADER_HEIGHT - 5,
 		left: 0,
 		right: 0,
 		height: 5,
@@ -110,26 +102,11 @@ const links: { label: string; link: string }[] = [
 
 export function Navbar() {
 	const [opened, { toggle, close }] = useDisclosure(false);
-	const pathname = usePathname();
-	const { classes, cx } = useStyles();
+	const { classes } = useStyles();
 	const { scrollYProgress } = useScroll();
 
-	let hash = '';
-
-	// pathname or router doesn't returns hash in app dir atm
-	if (typeof window !== 'undefined') {
-		hash = window.location.hash;
-	}
-
-	const url = pathname! + hash;
-
 	const items = links.map((link) => (
-		<a
-			className={cx(classes.link, { [classes.linkActive]: url === link.link })}
-			href={link.link}
-			key={link.label}
-			onClick={close}
-		>
+		<a className={classes.link} href={link.link} key={link.label} onClick={close}>
 			{link.label}
 		</a>
 	));

@@ -88,7 +88,7 @@ export function Faq() {
 					Frequently Asked Questions
 				</motion.div>
 
-				<motion.div animate={controls} initial="hidden" variants={bottomVariants}>
+				<motion.div animate={controls} initial="hidden" variants={bottomVariants()}>
 					<Accordion
 						chevronPosition="right"
 						chevronSize={50}

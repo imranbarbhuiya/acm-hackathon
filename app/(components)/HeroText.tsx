@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
 		paddingBottom: 80,
 		minHeight: '100vh',
 		width: '100vw',
-		margin: 0,
+		margin: '60px 0 0',
 		background: 'linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("/space.jpg")',
 		backgroundSize: 'cover',
 

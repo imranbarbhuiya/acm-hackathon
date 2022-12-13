@@ -1,10 +1,47 @@
 'use client';
 
-import { createStyles } from '@mantine/core';
+import { ActionIcon, createStyles, keyframes } from '@mantine/core';
+import { IconWorld, IconHome, IconMapPin, IconUser, IconBrandYoutube } from '@tabler/icons';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import CountUp from 'react-countup';
 
 import { topVariants, bottomVariants } from './variants';
+
+const bounce = keyframes({
+	'from, 20%, 53%, 80%, to': { transform: 'translate3d(0, 0, 0)' },
+	'40%, 43%': { transform: 'translate3d(0, -30px, 0)' },
+	'70%': { transform: 'translate3d(0, -15px, 0)' },
+	'90%': { transform: 'translate3d(0, -4px, 0)' },
+});
+
+const iconBoxData = [
+	{
+		icon: IconUser,
+		name: 'Registrations',
+		value: 8_652,
+	},
+	{
+		icon: IconHome,
+		name: 'Colleges',
+		value: 692,
+	},
+	{
+		icon: IconMapPin,
+		name: 'Cities',
+		value: 439,
+	},
+	{
+		icon: IconWorld,
+		name: 'Countries',
+		value: 439,
+	},
+	{
+		icon: IconBrandYoutube,
+		name: 'YouTube Views',
+		value: 439,
+	},
+];
 
 const useStyles = createStyles((theme) => ({
 	wrapper: {
@@ -38,7 +75,7 @@ const useStyles = createStyles((theme) => ({
 	},
 
 	description: {
-		margin: 'auto',
+		margin: '0 auto',
 		textAlign: 'center',
 		marginTop: theme.spacing.lg,
 		fontSize: theme.fontSizes.lg,
@@ -58,10 +95,43 @@ const useStyles = createStyles((theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		gap: 300,
 
 		'@media (max-width: 768px)': {
-			flexDirection: 'column',
+			gap: 100,
 		},
+	},
+
+	venue: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+	},
+
+	countPart: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: 30,
+		flexWrap: 'wrap',
+		marginTop: 20,
+	},
+	countBox: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+	},
+
+	countIcon: {
+		animation: `${bounce} 3s ease-in-out infinite`,
+		marginBottom: 10,
+	},
+
+	countText: {
+		fontSize: theme.fontSizes.xl,
+		fontWeight: 900,
 	},
 }));
 
@@ -80,12 +150,22 @@ export function About() {
 		}
 	}, [controls, inView]);
 
+	const iconBoxes = iconBoxData.map((data) => (
+		<div className={classes.countBox} key={data.name}>
+			<ActionIcon className={classes.countIcon} radius={100} size={100} variant="gradient">
+				<data.icon size={50} />
+			</ActionIcon>
+			<div className={classes.countText}>{inView ? <CountUp end={data.value} /> : null}</div>
+			<div>{data.name}</div>
+		</div>
+	));
+
 	return (
 		<div className={classes.wrapper} id="about" ref={ref}>
 			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
 				ABOUT THE EVENT
 			</motion.div>
-			<motion.div animate={controls} className={classes.description} initial="hidden" variants={bottomVariants}>
+			<motion.div animate={controls} className={classes.description} initial="hidden" variants={bottomVariants()}>
 				As a continuation of a legacy started by like-minded people, <span className={classes.bold}>ACM MJCET</span>{' '}
 				aims to bring together the minds of programmers, designers, application developers, tech-geeks, and novices to
 				the world of programming for the intensive development of a hack. At hackCBS, we provide a tranquil and
@@ -98,6 +178,19 @@ export function About() {
 				code in a single <span className={classes.bold}>24-hour period</span> and guzzling{' '}
 				<span className={classes.bold}>more than 10,000</span>
 				cups of coffee. But this time it’s going to be different, ‘coz this time it’s going to be even grander.
+			</motion.div>
+			<motion.div animate={controls} className={classes.venuePart} initial="hidden" variants={bottomVariants(100)}>
+				<div className={classes.venue}>
+					<div className={classes.bold}>Venue</div>
+					<div>[In-Person] - ACM MJCET</div>
+				</div>
+				<div className={classes.venue}>
+					<div className={classes.bold}>Dates</div>
+					<div>1st - 3rd Jan 2022</div>
+				</div>
+			</motion.div>
+			<motion.div animate={controls} className={classes.countPart} initial="hidden" variants={bottomVariants(150)}>
+				{iconBoxes}
 			</motion.div>
 		</div>
 	);
