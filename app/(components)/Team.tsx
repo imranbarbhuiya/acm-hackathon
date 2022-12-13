@@ -1,11 +1,11 @@
 'use client';
 
 import { createStyles, Card, Group, Text, Tooltip, ActionIcon } from '@mantine/core';
-import { IconBrandGithub } from '@tabler/icons';
+import { IconBrandGithub, type TablerIcon } from '@tabler/icons';
 import Image from 'next/image';
 
 interface SocialMediaData {
-	icon: React.ReactNode;
+	icon: TablerIcon;
 	link: string;
 	tooltip: string;
 }
@@ -58,11 +58,7 @@ const teamData: TeamCardProps[] = [
 		avatar: 'https://avatars.githubusercontent.com/u/69213593',
 		socialMedia: [
 			{
-				icon: (
-					<ActionIcon radius="xl" size="lg" variant="default">
-						<IconBrandGithub size={18} stroke={1.5} />
-					</ActionIcon>
-				),
+				icon: IconBrandGithub,
 				link: 'https://github.com/legendhimself',
 				tooltip: 'Github',
 			},
@@ -93,7 +89,9 @@ function TeamCard({ username, avatar, socialMedia, description }: TeamCardProps)
 				{socialMedia.map((data, index) => (
 					<Tooltip key={index} label={data.tooltip}>
 						<a href={data.link} rel="noreferrer" target="_blank">
-							{data.icon}
+							<ActionIcon radius="xl" size="lg" variant="default">
+								<data.icon size={18} stroke={1.5} />
+							</ActionIcon>
 						</a>
 					</Tooltip>
 				))}
@@ -106,7 +104,7 @@ export function Team() {
 	const { classes } = useStyle();
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.root} id="team">
 			<div className={classes.title}>MEET THE TEAM</div>
 			<Group className={classes.group}>
 				{teamData.map((data, index) => (

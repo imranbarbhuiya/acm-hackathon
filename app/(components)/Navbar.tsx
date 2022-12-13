@@ -95,6 +95,22 @@ const links: { label: string; link: string }[] = [
 		link: '#prizes',
 	},
 	{
+		label: 'Themes',
+		link: '#themes',
+	},
+	{
+		label: 'Schedule',
+		link: '#schedule',
+	},
+	{
+		label: 'Sponsors',
+		link: '#sponsors',
+	},
+	{
+		label: 'Team',
+		link: '#team',
+	},
+	{
 		label: 'FAQ',
 		link: '#faq',
 	},
