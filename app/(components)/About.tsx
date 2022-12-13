@@ -150,12 +150,22 @@ export function About() {
 		}
 	}, [controls, inView]);
 
-	const iconBoxes = iconBoxData.map((data) => (
+	const iconBoxes = iconBoxData.map((data, idx) => (
 		<div className={classes.countBox} key={data.name}>
-			<ActionIcon className={classes.countIcon} radius={100} size={100} variant="gradient">
+			<ActionIcon
+				className={classes.countIcon}
+				radius={100}
+				size={100}
+				sx={{
+					animationDelay: `${idx * 0.1}s`,
+				}}
+				variant="gradient"
+			>
 				<data.icon size={50} />
 			</ActionIcon>
-			<div className={classes.countText}>{inView ? <CountUp end={data.value} /> : null}</div>
+			<div className={classes.countText}>
+				<CountUp enableScrollSpy end={data.value} />
+			</div>
 			<div>{data.name}</div>
 		</div>
 	));
