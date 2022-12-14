@@ -8,12 +8,14 @@ import { useEffect, useRef } from 'react';
 import { topVariants } from './variants';
 
 import firstImage from '../(images)/first.png';
+import bestBeginner from '../(images)/hack-beginner.png';
+import bestBlockchain from '../(images)/hack-blockchain.png';
 import secondImage from '../(images)/second.png';
 import thirdImage from '../(images)/third.png';
 
 const useStyles = createStyles((theme, _params, getRef) => ({
 	wrapper: {
-		padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px 0`,
+		padding: `120px ${theme.spacing.xl}px ${theme.spacing.xl * 2}px`,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -24,13 +26,18 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 	},
 	title: {
 		fontSize: 34,
-		fontWeight: 900,
 		textAlign: 'left',
 		marginTop: theme.spacing.sm,
+		display: 'flex',
+		flexDirection: 'column',
 
 		[theme.fn.smallerThan('sm')]: {
 			fontSize: 24,
 		},
+	},
+
+	titleFirst: {
+		fontWeight: 900,
 
 		'&::after': {
 			content: '""',
@@ -38,20 +45,24 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 			backgroundColor: theme.fn.primaryColor(),
 			width: 45,
 			height: 2,
-			marginLeft: 'auto',
-			marginRight: 'auto',
 		},
+	},
+
+	titleSecond: {
+		fontStyle: 'italic',
+		fontSize: 24,
 	},
 
 	card: {
 		backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-		width: '300px',
-		height: '250px',
+		width: 300,
+		height: 250,
 		padding: theme.spacing.md,
 		borderRadius: theme.radius.sm,
 		boxShadow: `0px 0px 8px ${theme.colors.gray[theme.colorScheme === 'dark' ? 6 : 3]}`,
 		transition: 'transform 1s',
 		marginTop: 100,
+		cursor: 'pointer',
 
 		[`&:hover .${getRef('circleImage')}`]: {
 			transform: 'rotate(360deg)',
@@ -60,6 +71,10 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 		'&:hover': {
 			transform: 'translateY(-30px)',
 		},
+	},
+
+	cardLarge: {
+		width: 500,
 	},
 
 	topCircle: {
@@ -71,6 +86,7 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+		border: '18px solid #b4b9ff',
 	},
 
 	circleImage: {
@@ -93,7 +109,7 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 }));
 
 export function Prizes() {
-	const { classes } = useStyles();
+	const { classes, cx, theme } = useStyles();
 	const controls = useAnimation();
 	const ref = useRef(null);
 	const inView = useInView(ref);
@@ -110,7 +126,10 @@ export function Prizes() {
 	return (
 		<div className={classes.wrapper} id="prizes" ref={ref}>
 			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
-				PRIZES
+				<span className={classes.titleFirst}>PRIZES</span>
+				<span className={classes.titleSecond}>
+					worth <span className={classes.bold}>$100,000</span>
+				</span>
 			</motion.div>
 			<Group position="center" spacing="xl">
 				<div className={classes.card}>
@@ -165,6 +184,49 @@ export function Prizes() {
 						}}
 					>
 						<Image alt="Third" className={classes.circleImage} height={50} src={thirdImage} width={50} />
+					</div>
+					<Text align="center" mt="xl" size={30} weight={700}>
+						Third Prize
+					</Text>
+
+					<div className={classes.textBox}>
+						<Text align="center" color="dimmed" size="sm">
+							Total Prize worth <span className={classes.bold}>$1000</span>
+						</Text>
+						<Text align="center" color="dimmed" size="sm">
+							Cash Prize of <span className={classes.bold}>INR 35,000</span>
+						</Text>
+					</div>
+				</div>
+			</Group>
+
+			<Group position="center" spacing={1.5 * theme.spacing.xl}>
+				<div className={cx(classes.card, classes.cardLarge)}>
+					<div className={classes.topCircle}>
+						<Image
+							alt="Best Hack Blockchain"
+							className={classes.circleImage}
+							height={50}
+							src={bestBlockchain}
+							width={50}
+						/>
+					</div>
+					<Text align="center" mt="xl" size={30} weight={700}>
+						Second Prize
+					</Text>
+
+					<div className={classes.textBox}>
+						<Text align="center" color="dimmed" size="sm">
+							Total Prize worth <span className={classes.bold}>$1000</span>
+						</Text>
+						<Text align="center" color="dimmed" size="sm">
+							Cash Prize of <span className={classes.bold}>INR 35,000</span>
+						</Text>
+					</div>
+				</div>
+				<div className={cx(classes.card, classes.cardLarge)}>
+					<div className={classes.topCircle}>
+						<Image alt="Best Hack Beginner" className={classes.circleImage} height={50} src={bestBeginner} width={50} />
 					</div>
 					<Text align="center" mt="xl" size={30} weight={700}>
 						Third Prize

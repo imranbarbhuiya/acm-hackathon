@@ -9,6 +9,7 @@ import { Prizes } from './(components)/Prizes';
 import { Schedule } from './(components)/Schedule';
 import { Sponsors } from './(components)/Sponsor';
 import { Team } from './(components)/Team';
+import { Themes } from './(components)/Theme';
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 				<About />
 				<Carousel />
 				<Prizes />
+				<Themes />
 				<Schedule />
 				<Sponsors />
 				<Partners />

@@ -102,12 +102,8 @@ export function Schedule() {
 			<StyledTabs defaultValue="1">
 				<Tabs.List grow>
 					<Tabs.Tab value="1">1st - Jan</Tabs.Tab>
-					<Tabs.Tab disabled value="2">
-						2nd - Jan
-					</Tabs.Tab>
-					<Tabs.Tab disabled value="3">
-						3rd - Jan
-					</Tabs.Tab>
+					<Tabs.Tab value="2">2nd - Jan</Tabs.Tab>
+					<Tabs.Tab value="3">3rd - Jan</Tabs.Tab>
 				</Tabs.List>
 
 				<Tabs.Panel value="1">
@@ -154,8 +150,94 @@ export function Schedule() {
 						</Timeline.Item>
 					</Timeline>
 				</Tabs.Panel>
-				<Tabs.Panel value="2">2</Tabs.Panel>
-				<Tabs.Panel value="3">3</Tabs.Panel>
+				<Tabs.Panel value="2">
+					<Timeline active={5} bulletSize={18} lineWidth={4}>
+						<Timeline.Item title="Refreshments">
+							<Text mt={4} size="xs">
+								12.00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Fun activity">
+							<Text mt={4} size="xs">
+								06.00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Breakfast">
+							<Text mt={4} size="xs">
+								08.00 AM - 09.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Lunch">
+							<Text mt={4} size="xs">
+								01.00 PM - 02.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Workshop session 3 & 4">
+							<Text mt={4} size="xs">
+								02.00 PM - 03.30 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Hackathon description and problem statements">
+							<Text mt={4} size="xs">
+								03.30 PM - 04.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Kick off - Hackathon Starts">
+							<Text mt={4} size="xs">
+								04.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Day 2 Ends">
+							<Text mt={4} size="xs">
+								06.00 PM
+							</Text>
+						</Timeline.Item>
+					</Timeline>
+				</Tabs.Panel>
+				<Tabs.Panel value="3">
+					<Timeline active={5} bulletSize={18} lineWidth={4}>
+						<Timeline.Item title="Day 3 Starts">
+							<Text mt={4} size="xs">
+								10.00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Keynote session">
+							<Text mt={4} size="xs">
+								11.00 AM - 11.30 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Workshop Session 1 & 2">
+							<Text mt={4} size="xs">
+								11.30 AM - 01.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Lunch">
+							<Text mt={4} size="xs">
+								01.00 PM - 02.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Workshop session 3 & 4">
+							<Text mt={4} size="xs">
+								02.00 PM - 03.30 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Hackathon description and problem statements">
+							<Text mt={4} size="xs">
+								03.30 PM - 04.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Result announcements">
+							<Text mt={4} size="xs">
+								04.00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Hackathon wraps">
+							<Text mt={4} size="xs">
+								06.00 PM
+							</Text>
+						</Timeline.Item>
+					</Timeline>
+				</Tabs.Panel>
 			</StyledTabs>
 		</div>
 	);

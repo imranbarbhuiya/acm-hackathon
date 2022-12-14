@@ -45,7 +45,7 @@ const iconBoxData = [
 
 const useStyles = createStyles((theme) => ({
 	wrapper: {
-		padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px`,
+		padding: `120px ${theme.spacing.xl}px ${theme.spacing.xl * 2}px`,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
