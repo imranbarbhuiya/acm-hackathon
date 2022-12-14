@@ -5,10 +5,13 @@ import { createStyles, Tabs, Text, Timeline, type TabsProps } from '@mantine/cor
 const useStyle = createStyles((theme) => ({
 	root: {
 		marginTop: 20,
+		paddingTop: 120,
 		width: '100%',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		flexDirection: 'column',
+		gap: 50,
 	},
 
 	title: {

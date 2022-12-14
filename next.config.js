@@ -6,6 +6,7 @@ export default {
 		appDir: true,
 	},
 	images: {
+		// TODO: remove unsplash
 		domains: ['images.unsplash.com', 'plus.unsplash.com', 'avatars.githubusercontent.com'],
 	},
 };

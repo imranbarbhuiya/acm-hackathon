@@ -107,6 +107,10 @@ const links: { label: string; link: string }[] = [
 		link: '#sponsors',
 	},
 	{
+		label: 'Partners',
+		link: '#partners',
+	},
+	{
 		label: 'Team',
 		link: '#team',
 	},

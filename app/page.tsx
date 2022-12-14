@@ -4,8 +4,10 @@ import { Faq } from './(components)/Faq';
 import { Footer } from './(components)/Footer';
 import { HeroText } from './(components)/HeroText';
 import { Navbar } from './(components)/Navbar';
+import { Partners } from './(components)/Partners';
 import { Prizes } from './(components)/Prizes';
 import { Schedule } from './(components)/Schedule';
+import { Sponsors } from './(components)/Sponsor';
 import { Team } from './(components)/Team';
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
 				<Carousel />
 				<Prizes />
 				<Schedule />
+				<Sponsors />
+				<Partners />
 				<Team />
 				<Faq />
 			</div>

@@ -13,7 +13,7 @@ import thirdImage from '../(images)/third.png';
 
 const useStyles = createStyles((theme, _params, getRef) => ({
 	wrapper: {
-		padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px`,
+		padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px 0`,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
