@@ -15,7 +15,14 @@ export function Carousel() {
 
 	const images = urls.map((url, idx) => (
 		<MantineCarousel.Slide key={idx}>
-			<Image alt="Carousel Image" fill src={url} />
+			<Image
+				alt="Carousel Image"
+				fill
+				sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+				src={url}
+			/>
 		</MantineCarousel.Slide>
 	));
 

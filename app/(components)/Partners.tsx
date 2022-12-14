@@ -50,8 +50,15 @@ const useStyle = createStyles((theme) => ({
 	},
 
 	cardImage: {
+		transition: '0.8s',
+
+		'&:hover': {
+			transform: 'scale(1.1)',
+		},
+
 		[theme.fn.smallerThan('lg')]: {
 			width: 450,
+			height: 'auto',
 		},
 	},
 }));

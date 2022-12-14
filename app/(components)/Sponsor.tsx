@@ -83,6 +83,7 @@ const useStyle = createStyles((theme) => ({
 
 		[theme.fn.smallerThan('lg')]: {
 			width: 450,
+			height: 'auto',
 		},
 	},
 
