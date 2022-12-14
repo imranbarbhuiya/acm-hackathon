@@ -1,7 +1,6 @@
-'use client';
-
-import { createStyles } from '@mantine/core';
 import Image, { type StaticImageData } from 'next/image';
+
+import styles from './Sponsor.module.css';
 
 import linodeLogo from '../(images)/linode.png';
 import microsoftLogo from '../(images)/microsoft.png';
@@ -12,94 +11,6 @@ interface SponsorCardProps {
 	logo: StaticImageData | string;
 	name: string;
 }
-const useStyle = createStyles((theme) => ({
-	root: {
-		marginTop: 20,
-		paddingTop: 120,
-		width: '100%',
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-		justifyContent: 'center',
-		gap: 20,
-	},
-	title: {
-		fontSize: 34,
-		fontWeight: 900,
-		[theme.fn.smallerThan('sm')]: {
-			fontSize: 24,
-		},
-		textAlign: 'center',
-		marginTop: theme.spacing.sm,
-
-		'&::after': {
-			content: '""',
-			display: 'block',
-			backgroundColor: theme.fn.primaryColor(),
-			width: 45,
-			height: 2,
-			marginLeft: 'auto',
-			marginRight: 'auto',
-		},
-	},
-	cardWrapper: {
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		flexDirection: 'column',
-		gap: 30,
-		width: '100%',
-	},
-
-	card: {
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		gap: 50,
-
-		':nth-child(even)': {
-			flexDirection: 'row-reverse',
-		},
-
-		[theme.fn.smallerThan('lg')]: {
-			flexDirection: 'column',
-
-			':nth-child(even)': {
-				flexDirection: 'column',
-			},
-		},
-	},
-
-	cardImageLink: {
-		textDecoration: 'none',
-	},
-
-	cardLogo: {
-		transition: '0.8s',
-
-		'&:hover': {
-			transform: 'scale(1.1)',
-		},
-
-		[theme.fn.smallerThan('lg')]: {
-			width: 450,
-			height: 'auto',
-		},
-	},
-
-	cardTextBox: {
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		flexDirection: 'column',
-		width: 500,
-	},
-
-	cardTitle: {
-		fontSize: 32,
-		fontWeight: 900,
-	},
-}));
 
 const sponsorData: SponsorCardProps[] = [
 	{
@@ -119,20 +30,13 @@ const sponsorData: SponsorCardProps[] = [
 ];
 
 function SponsorCard({ name, link, logo, description }: SponsorCardProps) {
-	const { classes } = useStyle();
-
 	return (
-		<div
-			className={classes.card}
-			// style={{
-			// 	flexDirection: right ? 'row-reverse' : 'row',
-			// }}
-		>
-			<a className={classes.cardImageLink} href={link} rel="noreferrer" target="_blank">
-				<Image alt={name} className={classes.cardLogo} height={200} src={logo} />
+		<div className={styles.card}>
+			<a className={styles.cardImageLink} href={link} rel="noreferrer" target="_blank">
+				<Image alt={name} className={styles.cardLogo} height={200} src={logo} />
 			</a>
-			<div className={classes.cardTextBox}>
-				<div className={classes.cardTitle}>{name}</div>
+			<div className={styles.cardTextBox}>
+				<div className={styles.cardTitle}>{name}</div>
 				<div>{description}</div>
 			</div>
 		</div>
@@ -140,12 +44,10 @@ function SponsorCard({ name, link, logo, description }: SponsorCardProps) {
 }
 
 export function Sponsors() {
-	const { classes } = useStyle();
-
 	return (
-		<div className={classes.root} id="sponsors">
-			<div className={classes.title}>OUR SPONSORS</div>
-			<div className={classes.cardWrapper}>
+		<div className={styles.root} id="sponsors">
+			<div className={styles.title}>OUR SPONSORS</div>
+			<div className={styles.cardWrapper}>
 				{sponsorData.map((data) => (
 					<SponsorCard key={data.name} {...data} />
 				))}
