@@ -37,13 +37,19 @@ const useStyles = createStyles((theme) => ({
 	heroImage: {
 		'@media (max-width: 900px)': {
 			width: 750,
-			height: 220,
+			height: 'auto',
 		},
 
 		'@media (max-width: 755px)': {
 			marginTop: 100,
 			width: 550,
-			height: 200,
+			height: 'auto',
+		},
+
+		'@media (max-width: 500px)': {
+			marginTop: 100,
+			width: 350,
+			height: 'auto',
 		},
 	},
 

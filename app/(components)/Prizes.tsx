@@ -30,10 +30,6 @@ const useStyles = createStyles((theme, _params, getRef) => ({
 		marginTop: theme.spacing.sm,
 		display: 'flex',
 		flexDirection: 'column',
-
-		[theme.fn.smallerThan('sm')]: {
-			fontSize: 24,
-		},
 	},
 
 	titleFirst: {

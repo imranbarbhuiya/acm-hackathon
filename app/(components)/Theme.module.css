@@ -75,9 +75,3 @@
 	height: 50px;
 	opacity: 1;
 }
-
-@media (max-width: 756px) {
-	.title {
-		font-size: 24px;
-	}
-}

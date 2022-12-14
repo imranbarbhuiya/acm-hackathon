@@ -57,9 +57,6 @@ const useStyles = createStyles((theme) => ({
 	title: {
 		fontSize: 34,
 		fontWeight: 900,
-		[theme.fn.smallerThan('sm')]: {
-			fontSize: 24,
-		},
 		textAlign: 'center',
 		marginTop: theme.spacing.sm,
 
