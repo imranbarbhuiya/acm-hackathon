@@ -15,7 +15,7 @@ const useStyle = createStyles((theme) => ({
 	},
 
 	title: {
-		fontSize: 34,
+		fontSize: 50,
 		fontWeight: 900,
 		textAlign: 'center',
 		marginTop: theme.spacing.sm,
@@ -97,57 +97,77 @@ export function Schedule() {
 		<div className={classes.root} id="schedule">
 			<div className={classes.title}>Schedule</div>
 			<StyledTabs defaultValue="1">
-				<Tabs.List grow>
+				{/* <Tabs.List grow>
 					<Tabs.Tab value="1">1st - Jan</Tabs.Tab>
 					<Tabs.Tab value="2">2nd - Jan</Tabs.Tab>
 					<Tabs.Tab value="3">3rd - Jan</Tabs.Tab>
-				</Tabs.List>
+				</Tabs.List> */}
 
-				<Tabs.Panel value="1">
-					<Timeline active={5} bulletSize={18} lineWidth={4}>
-						<Timeline.Item title="Event Starts">
+				<div>
+					<Timeline active={0} bulletSize={18} lineWidth={4}>
+						<Timeline.Item title="Reporting Time">
 							<Text mt={4} size="xs">
-								10.00 AM
+								5:00 AM - 6:00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Start Hacking">
+							<Text mt={4} size="xs">
+								6:00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Breakfast Snacks">
+							<Text mt={4} size="xs">
+								7:00 AM
 							</Text>
 						</Timeline.Item>
 						<Timeline.Item title="Keynote session">
 							<Text mt={4} size="xs">
-								11.00 AM - 11.30 AM
+								8:00 AM - 8:30 AM
 							</Text>
 						</Timeline.Item>
-						<Timeline.Item title="Workshop Session 1 & 2">
+						<Timeline.Item title="Judgement: Round 1">
 							<Text mt={4} size="xs">
-								11.30 AM - 01.00 PM
+								10:00 AM - 11:00 AM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Mentorship: Round 1">
+							<Text mt={4} size="xs">
+								12:00 PM - 1:00 PM
 							</Text>
 						</Timeline.Item>
 						<Timeline.Item title="Lunch">
 							<Text mt={4} size="xs">
-								01.00 PM - 02.00 PM
+								1:30 PM - 2:30 PM
 							</Text>
 						</Timeline.Item>
-						<Timeline.Item title="Workshop session 3 & 4">
+						<Timeline.Item title="Judgement: Round 2">
 							<Text mt={4} size="xs">
-								02.00 PM - 03.30 PM
+								05:00 PM - 06:00 PM
 							</Text>
 						</Timeline.Item>
-						<Timeline.Item title="Hackathon description and problem statements">
+						<Timeline.Item title="Announcing the Finalists">
 							<Text mt={4} size="xs">
-								03.30 PM - 04.00 PM
+								7:00 PM
 							</Text>
 						</Timeline.Item>
-						<Timeline.Item title="Kick off - Hackathon Starts">
+						<Timeline.Item title="Dinner">
 							<Text mt={4} size="xs">
-								04.00 PM
+								7:30 PM - 8:30 PM
 							</Text>
 						</Timeline.Item>
-						<Timeline.Item title="Day 1 Ends">
+						<Timeline.Item title="Judgement: Round 3">
 							<Text mt={4} size="xs">
-								06.00 PM
+								9:30 PM - 10:00 PM
+							</Text>
+						</Timeline.Item>
+						<Timeline.Item title="Results Announcement">
+							<Text mt={4} size="xs">
+								10:30 PM
 							</Text>
 						</Timeline.Item>
 					</Timeline>
-				</Tabs.Panel>
-				<Tabs.Panel value="2">
+				</div>
+				{/* <Tabs.Panel value="2">
 					<Timeline active={5} bulletSize={18} lineWidth={4}>
 						<Timeline.Item title="Refreshments">
 							<Text mt={4} size="xs">
@@ -234,7 +254,7 @@ export function Schedule() {
 							</Text>
 						</Timeline.Item>
 					</Timeline>
-				</Tabs.Panel>
+				</Tabs.Panel> */}
 			</StyledTabs>
 		</div>
 	);

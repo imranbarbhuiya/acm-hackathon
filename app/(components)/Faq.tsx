@@ -110,7 +110,7 @@ export function Faq() {
 
 						<Accordion.Item className={classes.item} value="how-big-it-can-be">
 							<Accordion.Control>How big a team can be?</Accordion.Control>
-							<Accordion.Panel>The minimum team size is two and the maximum team size is four.</Accordion.Panel>
+							<Accordion.Panel>The minimum team size is 2 and the maximum team size is 4.</Accordion.Panel>
 						</Accordion.Item>
 
 						<Accordion.Item className={classes.item} value="who-all-can-participate">
@@ -131,11 +131,11 @@ export function Faq() {
 						</Accordion.Item>
 
 						<Accordion.Item className={classes.item} value="im-not-a-citizen">
-							<Accordion.Control>I'm not a citizen of India. Can I participate?</Accordion.Control>
+							<Accordion.Control>I'm not from MJCET. Can I participate?</Accordion.Control>
 							<Accordion.Panel>
 								There is only one eligibility for this hackathon and that is Motivation. If you love to code and have an
-								innovative brain then you are more than welcome. So yes, If you are an International Participant, You
-								are always welcome to our hackathon.
+								innovative brain then you are more than welcome. So yes, If you are from a different college, you are
+								always welcome to our hackathon.
 							</Accordion.Panel>
 						</Accordion.Item>
 					</Accordion>

@@ -11,21 +11,21 @@ interface ThemeBoxProps {
 
 const themes: ThemeBoxProps[] = [
 	{
-		title: 'FinTech',
+		title: 'Problem Statement',
 		image: finTechImage,
 	},
 	{
-		title: 'FinTech',
+		title: 'Open Innovation',
 		image: finTechImage,
 	},
-	{
-		title: 'FinTech',
-		image: finTechImage,
-	},
-	{
-		title: 'FinTech',
-		image: finTechImage,
-	},
+	// {
+	// 	title: 'FinTech',
+	// 	image: finTechImage,
+	// },
+	// {
+	// 	title: 'FinTech',
+	// 	image: finTechImage,
+	// },
 ];
 
 function ThemeBox({ image, title }: ThemeBoxProps) {
@@ -40,7 +40,7 @@ function ThemeBox({ image, title }: ThemeBoxProps) {
 export function Themes() {
 	return (
 		<div className={styles.root} id="themes">
-			<div className={styles.title}>THEMES</div>
+			<div className={styles.title}>Themes</div>
 			<div className={styles.themes}>
 				{themes.map((theme, idx) => (
 					<ThemeBox key={idx} {...theme} />

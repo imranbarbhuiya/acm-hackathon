@@ -1,7 +1,7 @@
 'use client';
 
 import { ActionIcon, createStyles, keyframes } from '@mantine/core';
-import { IconWorld, IconHome, IconMapPin, IconUser, IconBrandYoutube } from '@tabler/icons';
+import { IconCode, IconUser, IconHourglass, IconSchool, IconExclamationCircle } from '@tabler/icons';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
@@ -17,30 +17,35 @@ const bounce = keyframes({
 
 const iconBoxData = [
 	{
-		icon: IconUser,
-		name: 'Registrations',
-		value: 8_652,
+		icon: IconHourglass,
+		name: 'Hours',
+		value: 16,
 	},
 	{
-		icon: IconHome,
+		icon: IconExclamationCircle,
+		name: 'Problems',
+		value: 50,
+	},
+	// {
+	// 	icon: IconUser,
+	// 	name: 'Registrations',
+	// 	value: 103,
+	// },
+	{
+		icon: IconSchool,
 		name: 'Colleges',
-		value: 692,
+		value: 107,
 	},
 	{
-		icon: IconMapPin,
-		name: 'Cities',
-		value: 439,
+		icon: IconCode,
+		name: 'Lines of Code',
+		value: 50000,
 	},
-	{
-		icon: IconWorld,
-		name: 'Countries',
-		value: 439,
-	},
-	{
-		icon: IconBrandYoutube,
-		name: 'YouTube Views',
-		value: 439,
-	},
+	// {
+	// 	icon: IconBrandYoutube,
+	// 	name: 'YouTube Views',
+	// 	value: 439,
+	// },
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -55,7 +60,7 @@ const useStyles = createStyles((theme) => ({
 		position: 'relative',
 	},
 	title: {
-		fontSize: 34,
+		fontSize: 50,
 		fontWeight: 900,
 		textAlign: 'center',
 		marginTop: theme.spacing.sm,
@@ -93,6 +98,7 @@ const useStyles = createStyles((theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		gap: 300,
+		marginTop: 100,
 
 		'@media (max-width: 768px)': {
 			gap: 100,
@@ -112,7 +118,7 @@ const useStyles = createStyles((theme) => ({
 		alignItems: 'center',
 		gap: 30,
 		flexWrap: 'wrap',
-		marginTop: 20,
+		marginTop: 110,
 	},
 	countBox: {
 		display: 'flex',
@@ -170,30 +176,28 @@ export function About() {
 	return (
 		<div className={classes.wrapper} id="about" ref={ref}>
 			<motion.div animate={controls} className={classes.title} initial="hidden" variants={topVariants}>
-				ABOUT THE EVENT
+				About hACMathon
 			</motion.div>
 			<motion.div animate={controls} className={classes.description} initial="hidden" variants={bottomVariants()}>
-				As a continuation of a legacy started by like-minded people, <span className={classes.bold}>ACM MJCET</span>{' '}
-				aims to bring together the minds of programmers, designers, application developers, tech-geeks, and novices to
-				the world of programming for the intensive development of a hack. At hackCBS, we provide a tranquil and
-				welcoming environment where you will be completely free to develop a product, pick up new skills, and along with
-				that, we'll also give you the chance to network with leaders in the hacker community. You've come to the right
-				place if you haven't taken part in a hackathon before, as you are about to witness a series of events that will
-				enlighten as well as enhance your skills. Experienced hackers must have been familiar with hackCBS, the biggest
-				student-run hackathon in India.Over <span className={classes.bold}>1,000 hackers</span> from all over the
-				country competed for the top spot last year, writing over <span className={classes.bold}>50,000 lines</span> of
-				code in a single <span className={classes.bold}>24-hour period</span> and guzzling{' '}
-				<span className={classes.bold}>more than 10,000</span>
-				cups of coffee. But this time it’s going to be different, ‘coz this time it’s going to be even grander.
+				<span className={classes.bold}>ACM MJCET</span> aims to bring together the minds of programmers, designers,
+				application developers, tech-geeks, and novices to the world of programming for the intensive development of a
+				hack. At <span className={classes.bold}>hACMathon</span>, we provide a tranquil and welcoming environment where
+				you will be completely free to develop a product, pick up new skills, and along with that, we'll also give you
+				the chance to network with leaders in the hacker community. You've come to the right place if you haven't taken
+				part in a hackathon before, as you are about to witness an event that will enlighten as well as enhance your
+				skills. Over <span className={classes.bold}>500 hackers</span> from all over hyderabad will compete for the top
+				spot, writing over <span className={classes.bold}>50,000 lines</span> of code in a single{' '}
+				<span className={classes.bold}>16-hour period</span> and guzzling{' '}
+				<span className={classes.bold}>Hyderabad's favourite food</span>.
 			</motion.div>
 			<motion.div animate={controls} className={classes.venuePart} initial="hidden" variants={bottomVariants(100)}>
 				<div className={classes.venue}>
 					<div className={classes.bold}>Venue</div>
-					<div>[In-Person] - ACM MJCET</div>
+					<div>Muffakham Jah College of Engineering & Technology, Hyderabad 500034</div>
 				</div>
 				<div className={classes.venue}>
-					<div className={classes.bold}>Dates</div>
-					<div>1st - 3rd Jan 2022</div>
+					<div className={classes.bold}>Date</div>
+					<div>22nd Jan 2023</div>
 				</div>
 			</motion.div>
 			<motion.div animate={controls} className={classes.countPart} initial="hidden" variants={bottomVariants(150)}>

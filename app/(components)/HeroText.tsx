@@ -91,7 +91,7 @@ export function HeroText() {
 
 				<Container p={0} size={600}>
 					<Text className={classes.date} size={1.5 * theme.fontSizes.xl}>
-						1st Jan 2023
+						22nd Jan 2023
 					</Text>
 					<div className={classes.controls}>
 						<Button className={classes.control} size="lg">

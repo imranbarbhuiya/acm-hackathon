@@ -1,5 +1,5 @@
 import { About } from './(components)/About';
-import { Carousel } from './(components)/Carousel';
+// import { Carousel } from './(components)/Carousel';
 import { Faq } from './(components)/Faq';
 import { Footer } from './(components)/Footer';
 import { HeroText } from './(components)/HeroText';
@@ -22,7 +22,7 @@ export default function Home() {
 				<Navbar />
 				<HeroText />
 				<About />
-				<Carousel />
+				{/* <Carousel /> */}
 				<Prizes />
 				<Themes />
 				<Schedule />

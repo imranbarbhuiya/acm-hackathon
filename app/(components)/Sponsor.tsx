@@ -2,8 +2,7 @@ import Image, { type StaticImageData } from 'next/image';
 
 import styles from './Sponsor.module.css';
 
-import linodeLogo from '../(images)/linode.png';
-import microsoftLogo from '../(images)/microsoft.png';
+import shadabLogo from '../(images)/shadab.jpeg';
 
 interface SponsorCardProps {
 	description: string;
@@ -14,18 +13,18 @@ interface SponsorCardProps {
 
 const sponsorData: SponsorCardProps[] = [
 	{
-		name: 'Microsoft Corporation',
+		name: 'Hotel Shadab',
 		description:
-			'Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. Its best known software products are the Microsoft Windows line of operating systems, the Microsoft Office suite, and the Internet Explorer and Edge web browsers. Its flagship hardware products are the Xbox video game consoles and the Microsoft Surface lineup of touchscreen personal computers.',
-		link: 'https://www.microsoft.com/en-us/',
-		logo: microsoftLogo,
+			"Hotel Shadab is one of the best restaurants of all time in Hyderabad. Started in 1990, located in the old city of hyderabad, Hotel Shadab is well known for it's authentic, flavourful and award-winning hyderabadi biryani and hyderabadi haleem.",
+		link: 'https://goo.gl/maps/wUEEStwZzF9WnP4E7',
+		logo: shadabLogo,
 	},
 	{
-		name: 'Linode LLC',
+		name: 'Hotel Shadab',
 		description:
-			'Linode, LLC, an American privately-owned company (based in Philadelphia, Pennsylvania, United States), provides virtual private servers. Linode offers multiple products and services for its clients. Its flagship products are cloud-hosting services with multiple packages at different price points. As of November 2019, Linode offers five kinds of compute services geared towards specific needs of the customers like high memory requirements, dedicated CPU or GPU or general purpose usage. Linode Block Storage allows users to extend their server storage capacity with volumes on demand. Linode Backup allows customers to backup their servers on a daily, weekly, or monthly basis. Linode Manager and NodeBalancer both allow users to manage multiple server instances across a single system.',
-		link: 'https://www.linode.com/',
-		logo: linodeLogo,
+			"Hotel Shadab is one of the best restaurants of all time in Hyderabad. Started in 1990, located in the old city of hyderabad, Hotel Shadab is well known for it's authentic, flavourful and award-winning hyderabadi biryani and hyderabadi haleem.",
+		link: 'https://goo.gl/maps/wUEEStwZzF9WnP4E7',
+		logo: shadabLogo,
 	},
 ];
 
@@ -46,7 +45,7 @@ function SponsorCard({ name, link, logo, description }: SponsorCardProps) {
 export function Sponsors() {
 	return (
 		<div className={styles.root} id="sponsors">
-			<div className={styles.title}>OUR SPONSORS</div>
+			<div className={styles.title}>Our Sponsors</div>
 			<div className={styles.cardWrapper}>
 				{sponsorData.map((data) => (
 					<SponsorCard key={data.name} {...data} />
